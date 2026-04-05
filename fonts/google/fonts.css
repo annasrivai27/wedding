@@ -1,0 +1,26 @@
+/* Cinzel - latin */
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("cinzel.woff2") format("woff2");
+}
+
+/* Elsie Swash Caps - latin */
+@font-face {
+  font-family: "Elsie Swash Caps";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("elsie.woff2") format("woff2");
+}
+
+/* Jost - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("jost.woff2") format("woff2");
+}

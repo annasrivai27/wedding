@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Phosphor";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("Phosphor-Fill.woff2") format("woff2");
+}
+
+.ph-fill {
+  font-family: "Phosphor" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
