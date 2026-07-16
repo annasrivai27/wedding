@@ -110,13 +110,13 @@
 
       :root {
         --inv-bg: #fefefe;
-        --inv-base: #151b59;
-        --inv-accent: #ba9c55;
-        --inv-border: #ba9c55;
-        --menu-bg: #151b59;
-        --menu-inactive: #ba9c55;
-        --menu-active: #ba9c55;
-        --btn-color: #ffffff;
+        --inv-base: #3b1f0e;
+        --inv-accent: #c9a84c;
+        --inv-border: #c9a84c;
+        --menu-bg: #3b1f0e;
+        --menu-inactive: #c9a84c;
+        --menu-active: #f0e6c8;
+        --btn-color: #f0e6c8;
         --font-base: "Jost", sans-serif;
         --font-accent: "Cinzel", serif;
         --font-latin: "Elsie Swash Caps", serif;
@@ -150,6 +150,42 @@
       }
       #YTMusic {
         display: block;
+      }
+
+      /* ── Navigasi & tombol float menyesuaikan palet bg-cover ── */
+      .btn-float {
+        background-color: #3b1f0e !important;
+        border-color: #3b1f0e !important;
+        color: #c9a84c !important;
+        opacity: 0.9;
+        box-shadow: 0 2px 8px rgba(59,31,14,0.4);
+      }
+      .btn-float:hover,
+      .btn-float:focus {
+        background-color: #5c3d1e !important;
+        border-color: #5c3d1e !important;
+        opacity: 1;
+      }
+      .satumomen_menu {
+        background-color: #3b1f0e !important;
+      }
+      .satumomen_menu_item {
+        color: #c9a84c !important;
+      }
+      .satumomen_menu_item.active {
+        color: #f0e6c8 !important;
+      }
+      .btn-primary {
+        background-color: #3b1f0e !important;
+        border-color: #3b1f0e !important;
+        color: #f0e6c8 !important;
+      }
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary.active {
+        background-color: #5c3d1e !important;
+        border-color: #5c3d1e !important;
+        color: #f0e6c8 !important;
       }
     </style>
   </head>
