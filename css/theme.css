@@ -115,16 +115,24 @@ body {
   height: 0%;
   border-radius: 0.8rem;
   transition: all ease-in-out 0.1s;
+  z-index: 0;
 }
 .satumomen_menu .satumomen_menu_item.active {
-  color: var(--btn-color);
+  color: var(--menu-bg);
 }
 .satumomen_menu .satumomen_menu_item.active:after {
   content: "";
-  background-color: var(--menu-active);
+  background-color: rgba(201, 168, 76, 0.25);
   position: absolute;
   width: calc(100% - 0.5rem);
   height: calc(100% - 0.5rem);
+  z-index: 0;
+}
+.satumomen_menu .satumomen_menu_item svg,
+.satumomen_menu .satumomen_menu_item span,
+.satumomen_menu .satumomen_menu_item i {
+  z-index: 2;
+  position: relative;
 }
 .font-accent {
   font-family: var(--font-accent);
