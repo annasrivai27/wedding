@@ -218,32 +218,8 @@
                     <li class="satumomen_slide satumomen_cover">
                       <div
                         class="container-mobile cover"
-                        style="
-                          background-image: url(images/theme/bg.webp); ;
-                        "
+                        style="background-image: url(images/theme/bg.webp);"
                       >
-                        <div class="frame">
-                          <img
-                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
-                            src="images/theme/tl.webp"
-                            alt="frame"
-                          />
-                          <img
-                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
-                            src="images/theme/tr.webp"
-                            alt="frame"
-                          />
-                          <img
-                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
-                            src="images/theme/bl.webp"
-                            alt="frame"
-                          />
-                          <img
-                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
-                            src="images/theme/br.webp"
-                            alt="frame"
-                          />
-                        </div>
                         <div
                           class="p-4 d-flex flex-column justify-content-center align-items-center"
                           style="
@@ -260,13 +236,13 @@
                             >
                               <div
                                 class="editable font-latin"
-                                style="font-size: 34px; line-height: 1.2; font-family: 'FontJawa', serif; color: #ffffff;"
+                                style="font-size: 34px; line-height: 1.2; font-family: 'FontJawa', serif; color: #ba9c55;"
                               >
                                 Annas &amp; Tyas
                               </div>
                               <div
                                 class="editable"
-                                style="font-size: 14.4px; color: #ffffff;"
+                                style="font-size: 14.4px; color: #ba9c55;"
                               >
                                 Kamis, 6 Agustus 2026
                               </div>
@@ -281,14 +257,14 @@
                             >
                               <div
                                 class="editable mb-1 animate__animated animate__fadeInUp animate__slower"
-                                style="font-size: 14px; color: #ffffff;"
+                                style="font-size: 14px; color: #ba9c55;"
                               >
                                 Kepada Yth.<br />Bapak/Ibu/Saudara/i
                               </div>
                               <div
                                 id="guestNameSlot"
                                 class="editable h5 font-weight-bold mb-1 animate__animated animate__fadeInUp animate__slower"
-                                style="font-size: 16px; color: #ffffff;"
+                                style="font-size: 16px; color: #ba9c55;"
                               >
                                 Tamu Undangan
                               </div>
@@ -1180,7 +1156,7 @@
                                         class="editable"
                                         style="font-size: 14.4px"
                                       >
-                                        a.n Muhamad Annas Rivai
+                                        Bank Mandiri : Muhamad Annas Rivai
                                       </div>
                                     </div>
                                   </div>
@@ -1214,7 +1190,7 @@
                                         class="editable"
                                         style="font-size: 14.4px"
                                       >
-                                        a.n Tyastiani Harya Prabawati
+                                        Bank Mandiri : Tyastiani Harya Prabawati
                                       </div>
                                     </div>
                                   </div>
@@ -1908,8 +1884,18 @@
         var params = new URLSearchParams(window.location.search);
         var to = params.get("to");
         if (to) {
+          var name = decodeURIComponent(to);
+          // Set data-guest untuk dibaca themesv2.js
           var el = document.getElementById("satuMomen");
-          if (el) el.dataset.guest = decodeURIComponent(to);
+          if (el) el.dataset.guest = name;
+          // Update langsung ke slot teks nama tamu
+          var slot = document.getElementById("guestNameSlot");
+          if (slot) slot.innerHTML = name;
+          // Juga update setelah DOM selesai (jaga-jaga render async)
+          document.addEventListener("DOMContentLoaded", function () {
+            var slot2 = document.getElementById("guestNameSlot");
+            if (slot2) slot2.innerHTML = name;
+          });
         }
       })();
     </script>
