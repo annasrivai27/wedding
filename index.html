@@ -1921,7 +1921,8 @@
         var params = new URLSearchParams(window.location.search);
         var to = params.get("to");
         if (to) {
-          var name = decodeURIComponent(to);
+          // URLSearchParams sudah decode %20 dan + jadi spasi otomatis
+          var name = to;
           // Set data-guest untuk dibaca themesv2.js
           var el = document.getElementById("satuMomen");
           if (el) el.dataset.guest = name;
